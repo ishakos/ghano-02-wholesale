@@ -1,0 +1,70 @@
+/**
+ * wilayas.js — All 58 Algerian wilayas (provinces)
+ * Used to populate the wilaya <select> in the order form.
+ *
+ * Pricing source: ZR Express — "Tarif De Livraison E-Commerce Départ DE BLIDA"
+ * home   = تعريفة التوصيل للمنزل (à domicile)
+ * office = تعريفة التوصيل للمكتب (stopdesk / au bureau)
+ * A value of null means that service is not offered for that wilaya (marked "/" on the sheet).
+ */
+
+const WILAYAS = [
+  { id: 1, name: "01 - أدرار", home: 1400, office: 970 },
+  { id: 2, name: "02 - الشلف", home: 750, office: 520 },
+  { id: 3, name: "03 - الأغواط", home: 950, office: 670 },
+  { id: 4, name: "04 - أم البواقي", home: 800, office: 520 },
+  { id: 5, name: "05 - باتنة", home: 800, office: 520 },
+  { id: 6, name: "06 - بجاية", home: 800, office: 520 },
+  { id: 7, name: "07 - بسكرة", home: 950, office: 670 },
+  { id: 8, name: "08 - بشار", home: 1100, office: 720 },
+  { id: 9, name: "09 - البليدة", home: 400, office: 370 },
+  { id: 10, name: "10 - البويرة", home: 750, office: 520 },
+  { id: 11, name: "11 - تمنراست", home: 1600, office: 1120 },
+  { id: 12, name: "12 - تبسة", home: 850, office: 520 },
+  { id: 13, name: "13 - تلمسان", home: 850, office: 570 },
+  { id: 14, name: "14 - تيارت", home: 800, office: 520 },
+  { id: 15, name: "15 - تيزي وزو", home: 750, office: 520 },
+  { id: 16, name: "16 - الجزائر", home: 500, office: 420 },
+  { id: 17, name: "17 - الجلفة", home: 950, office: 670 },
+  { id: 18, name: "18 - جيجل", home: 800, office: 520 },
+  { id: 19, name: "19 - سطيف", home: 750, office: 520 },
+  { id: 20, name: "20 - سعيدة", home: 800, office: 570 },
+  { id: 21, name: "21 - سكيكدة", home: 800, office: 520 },
+  { id: 22, name: "22 - سيدي بلعباس", home: 800, office: 520 },
+  { id: 23, name: "23 - عنابة", home: 800, office: 520 },
+  { id: 24, name: "24 - قالمة", home: 800, office: 520 },
+  { id: 25, name: "25 - قسنطينة", home: 800, office: 520 },
+  { id: 26, name: "26 - المدية", home: 750, office: 520 },
+  { id: 27, name: "27 - مستغانم", home: 800, office: 520 },
+  { id: 28, name: "28 - المسيلة", home: 850, office: 570 },
+  { id: 29, name: "29 - معسكر", home: 800, office: 520 },
+  { id: 30, name: "30 - ورقلة", home: 950, office: 670 },
+  { id: 31, name: "31 - وهران", home: 800, office: 520 },
+  { id: 32, name: "32 - البيض", home: 1100, office: 670 },
+  { id: 33, name: "33 - إليزي", home: null, office: null },
+  { id: 34, name: "34 - برج بوعريريج", home: 750, office: 520 },
+  { id: 35, name: "35 - بومرداس", home: 750, office: 520 },
+  { id: 36, name: "36 - الطارف", home: 800, office: 520 },
+  { id: 37, name: "37 - تندوف", home: null, office: null },
+  { id: 38, name: "38 - تيسمسيلت", home: 800, office: 520 },
+  { id: 39, name: "39 - الوادي", home: 950, office: 670 },
+  { id: 40, name: "40 - خنشلة", home: 800, office: 520 },
+  { id: 41, name: "41 - سوق أهراس", home: 800, office: 520 },
+  { id: 42, name: "42 - تيبازة", home: 750, office: 520 },
+  { id: 43, name: "43 - ميلة", home: 800, office: 520 },
+  { id: 44, name: "44 - عين الدفلى", home: 750, office: 520 },
+  { id: 45, name: "45 - النعامة", home: 1100, office: 670 },
+  { id: 46, name: "46 - عين تموشنت", home: 800, office: 520 },
+  { id: 47, name: "47 - غرداية", home: 950, office: 670 },
+  { id: 48, name: "48 - غليزان", home: 800, office: 520 },
+  { id: 49, name: "49 - تيميمون", home: 1400, office: 1400 },
+  { id: 50, name: "50 - برج باجي مختار", home: null, office: null },
+  { id: 51, name: "51 - أولاد جلال", home: 950, office: 670 },
+  { id: 52, name: "52 - بني عباس", home: 1000, office: 970 },
+  { id: 53, name: "53 - عين صالح", home: 1600, office: 1600 },
+  { id: 54, name: "54 - عين قزام", home: 1600, office: 1600 },
+  { id: 55, name: "55 - تقرت", home: 950, office: 670 },
+  { id: 56, name: "56 - جانت", home: null, office: null },
+  { id: 57, name: "57 - المغير", home: 950, office: 950 },
+  { id: 58, name: "58 - المنيعة", home: 1000, office: 1000 }
+];

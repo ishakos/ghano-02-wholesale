@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+
+  <title>كتب للمدارس</title>
+
+  <!-- Favicon — place your image file next to index.html and update the href -->
+  <!-- Option A: PNG file (e.g. logo.png) -->
+  <link rel="icon" type="image/png" href="logo.jpg" />
+  <!-- Option B: ICO file (classic, best browser support) -->
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico" /> -->
+  <!-- Option C: SVG (modern browsers only) -->
+  <!-- <link rel="icon" type="image/svg+xml" href="icon.svg" /> -->
+  <!-- Apple devices home screen icon -->
+  <link rel="apple-touch-icon" href="logo.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+<!-- Meta Pixel Code -->
+<!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  <!-- ░░░░░░░░░░░░░░  GALLERY  ░░░░░░░░░░░░░░ -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="gallery__grid">
+        <!-- Placeholder images — swap src with real photos -->
+        <div class="gallery__item">
+          <img
+            src="image1.png"
+            alt="كتاب"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░  ORDER FORM  ░░░░░░░░░░░░░░ -->
+  <section class="section order" id="order">
+    <div class="container">
+      <h2 class="section__title">أكمل طلبك</h2>
+      <p class="section__sub">الدفع عند الاستلام</p>
+
+      <div class="order__wrapper">
+        <form id="orderForm" class="order__form" novalidate>
+
+          <!-- Selected pack display -->
+          <div class="form-pack-display" id="packDisplay">
+            <span class="form-pack-display__label">الباقة المختارة:</span>
+            <span class="form-pack-display__value" id="packDisplayValue">لم يتم الاختيار بعد</span>
+          </div>
+
+          <!-- Full name -->
+          <div class="field">
+            <label class="field__label" for="fullName">الاسم الكامل <span class="req">*</span></label>
+            <input
+              class="field__input"
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="مثال: أحمد بن علي"
+              required
+              autocomplete="name"
+            />
+            <span class="field__error" id="fullNameErr"></span>
+          </div>
+
+          <!-- Phone -->
+          <div class="field">
+            <label class="field__label" for="phone">رقم الهاتف <span class="req">*</span></label>
+            <input
+              class="field__input"
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="0xxxxxxxxx"
+              maxlength="10"
+              required
+              autocomplete="tel"
+              inputmode="numeric"
+            />
+            <span class="field__hint">يبدأ بـ 05 أو 06 أو 07 متبوعاً بـ 8 أرقام</span>
+            <span class="field__error" id="phoneErr"></span>
+          </div>
+
+          <!-- Wilaya + Commune row -->
+          <div class="field-row">
+            <div class="field">
+              <label class="field__label" for="wilaya">الولاية <span class="req">*</span></label>
+              <select class="field__input field__select" id="wilaya" name="wilaya" required>
+                <option value="">— اختر الولاية —</option>
+              </select>
+              <span class="field__error" id="wilayaErr"></span>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="commune">البلدية <span class="req">*</span></label>
+              <input
+                class="field__input"
+                type="text"
+                id="commune"
+                name="commune"
+                placeholder="اسم البلدية"
+                required
+              />
+              <span class="field__error" id="communeErr"></span>
+            </div>
+          </div>
+
+          <!-- Pack selection inside form (radio) -->
+          <div class="field">
+            <label class="field__label">الباقة المطلوبة <span class="req">*</span></label>
+            <div class="pack-radios" id="packRadios">
+              <label class="pack-radio">
+                <input type="radio" name="pack" value="10 كتاب" required />
+                <span class="pack-radio__box">
+                  <span class="pack-radio__name">10 كتاب</span>
+                  <span class="pack-radio__price">6900 دج</span>
+                </span>
+              </label>
+              <label class="pack-radio">
+                <input type="radio" name="pack" value="20 كتاب" />
+                <span class="pack-radio__box">
+                  <span class="pack-radio__name">20 كتاب</span>
+                  <span class="pack-radio__price">13200 دج</span>
+                </span>
+              </label>
+              <label class="pack-radio">
+                <input type="radio" name="pack" value="30 كتاب" />
+                <span class="pack-radio__box">
+                  <span class="pack-radio__name">30 كتاب</span>
+                  <span class="pack-radio__price">18900 دج</span>
+                </span>
+              </label>
+            </div>
+            <span class="field__error" id="packErr"></span>
+          </div>
+
+          <!-- Delivery Method -->
+          <div class="field">
+            <label class="field__label">
+              طريقة التوصيل <span class="req">*</span>
+            </label>
+
+              <div class="delivery-options">
+
+                            <label class="delivery-card">
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="office"
+                >
+                <span class="delivery-text">
+                  🏢 توصيل إلى المكتب
+                </span>
+              </label>
+
+              <label class="delivery-card">
+                <input
+                  type="radio"
+                  name="delivery"
+                  value="home"
+                  required
+                >
+                <span class="delivery-text">
+                  🏠 توصيل إلى المنزل
+                </span>
+              </label>
+
+            </div>
+
+            <span class="field__error" id="deliveryErr"></span>
+          </div>
+
+          <div class="order-summary">
+          <h3>ملخص الطلب</h3>
+
+          <div class="summary-row">
+            <span>سعر الباقة</span>
+            <span id="packPrice">0 دج</span>
+          </div>
+
+          <div class="summary-row">
+            <span>سعر التوصيل</span>
+            <span id="deliveryPrice">0 دج</span>
+          </div>
+
+          <hr>
+
+          <div class="summary-row total">
+            <strong>الإجمالي</strong>
+            <strong id="totalPrice">0 دج</strong>
+          </div>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn--gold btn--full" id="submitBtn">
+            <span id="submitText">أرسل طلبي 🛒</span>
+            <span id="submitSpinner" hidden>جاري الإرسال...</span>
+          </button>
+
+          <p class="order__note">🔒 بياناتك محفوظة ولن تُستخدم إلا لتأكيد الطلب والتوصيل.</p>
+        </form>
+
+        <!-- Bulk orders -->
+        <a href="tel:+213540988571" class="bulk-call">
+          <span class="bulk-call__text">لطلب كمية أكبر اتصل بنا</span>
+          <span class="bulk-call__number" dir="ltr">📞 0540 98 85 71</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░  THANK YOU (hidden) ░░░░░░░░░░░░░░ -->
+  <div class="thankyou-overlay" id="thankYou" hidden>
+    <div class="thankyou__card">
+      <div class="thankyou__icon">🌿</div>
+      <h2 class="thankyou__title">شكراً لك!</h2>
+      <p class="thankyou__msg">
+        تم استقبال طلبك بنجاح.<br />
+        سنتصل بك قريباً لتأكيد الطلب وتحديد موعد التوصيل.
+      </p>
+      <button class="btn btn--gold" onclick="closeThankYou()">العودة للصفحة</button>
+    </div>
+  </div>
+
+  <!-- ░░░░░░░░░░░░░░  STICKY CALL BUTTON  ░░░░░░░░░░░░░░ -->
+  <a href="tel:+213540988571" class="call-fab" aria-label="اتصل بنا">
+    <span class="call-fab__icon">📞</span>
+    <span class="call-fab__text">اتصل بنا</span>
+  </a>
+
+  <!-- Main JS -->
+  <script src="wilayas.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
