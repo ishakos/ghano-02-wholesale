@@ -910,7 +910,7 @@ a:hover { text-decoration: underline; }
   color: red;
   text-decoration: line-through;
   font-weight: 700;
-  font-size: .75rem;
+  font-size: .9rem;
 }
 
 .pack-radio__price--new {
