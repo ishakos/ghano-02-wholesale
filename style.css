@@ -891,3 +891,33 @@ a:hover { text-decoration: underline; }
   letter-spacing: .04em;
   color: var(--gold-light);
 }
+
+.pack-radio__price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  gap: 2px;
+  white-space: nowrap;
+}
+
+.pack-radio__price--old {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: red;
+  text-decoration: line-through;
+  font-weight: 700;
+  font-size: .75rem;
+}
+
+.pack-radio__price--new {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: var(--gold-dark);
+  font-weight: 700;
+  font-size: .8rem;
+}
