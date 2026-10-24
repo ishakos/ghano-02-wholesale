@@ -266,9 +266,9 @@ document.getElementById("orderForm")?.addEventListener("submit", async function 
 });
 
 const PACK_PRICES = {
-  "10 كتاب": 6900,
-  "20 كتاب": 13200,
-  "30 كتاب": 18900,
+  "10 كتاب": 5700,
+  "30 كتاب": 16500,
+  "70 كتاب": 36400,
 };
 
 function extractPrice(packString) {
