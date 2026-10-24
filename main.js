@@ -159,7 +159,7 @@ async function sendToSheet(data) {
    */
   const params = new URLSearchParams({
     timestamp:  new Date().toISOString(),
-    productName: "مصحف 60 حزب",
+    productName: "مصحف ربع يس",
     fullName:   data.fullName,
     phone:      String(data.phone).padStart(10, "0"),
     wilaya:     data.wilaya,
