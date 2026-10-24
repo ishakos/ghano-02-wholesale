@@ -2,21 +2,21 @@
    DESIGN TOKENS
    ============================================================ */
 :root {
-  --green-900: #001f2e;   /* darkest, headings/footer */
-  --green-800: #00344c;   /* your blue, main brand color */
-  --green-700: #0b4a68;
-  --green-600: #1b6a90;
-  --green-100: #e2eff5;
-  --green-50:  #f2f8fb;
+  --green-900: #04150d;   /* darkest, headings/footer */
+  --green-800: #0d3d23;   /* main brand green, matches the mushaf cover */
+  --green-700: #17582f;
+  --green-600: #237a3f;
+  --green-100: #e4f3e8;
+  --green-50:  #f4faf5;
 
-  --gold:      #c9963a;
-  --gold-dark: #a67a28;
-  --gold-light:#f0d690;
+  --gold:      #c9a227;
+  --gold-dark: #9c7a1a;
+  --gold-light:#e8d27a;
 
   --text-dark: #1c1c1e;
   --text-mid:  #444;
   --text-muted:#777;
-  --border:    #d3e3ec;
+  --border:    #d7e7da;
   --white:     #fafafa;
   --error:     #c0392b;
 
@@ -24,9 +24,9 @@
   --radius-md: 14px;
   --radius-lg: 24px;
 
-  --shadow-sm: 0 2px 8px rgba(0,52,76,.08);
-  --shadow-md: 0 6px 24px rgba(0,52,76,.12);
-  --shadow-lg: 0 16px 48px rgba(0,52,76,.18);
+  --shadow-sm: 0 2px 8px rgba(13,61,35,.08);
+  --shadow-md: 0 6px 24px rgba(13,61,35,.12);
+  --shadow-lg: 0 16px 48px rgba(13,61,35,.18);
 
   --font-display: 'Amiri', serif;
   --font-body:    'Inter', sans-serif;
@@ -365,7 +365,7 @@ a:hover { text-decoration: underline; }
 .field__input:focus {
   outline: none;
   border-color: var(--green-600);
-  box-shadow: 0 0 0 3px rgba(27,106,144,.12);
+  box-shadow: 0 0 0 3px rgba(35,122,63,.12);
 }
 .field__input.error { border-color: var(--error); }
 
@@ -494,7 +494,7 @@ a:hover { text-decoration: underline; }
 .thankyou-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,31,46,.85);
+  background: rgba(4,21,13,.85);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -589,7 +589,7 @@ a:hover { text-decoration: underline; }
   font-family: var(--font-body);
   font-weight: 700;
   font-size: .95rem;
-  box-shadow: 0 8px 24px rgba(0,31,46,.35);
+  box-shadow: 0 8px 24px rgba(4,21,13,.35);
   text-decoration: none;
   animation: callPulse 2.2s infinite;
   transition: transform .15s, box-shadow .15s, background .15s;
@@ -598,14 +598,14 @@ a:hover { text-decoration: underline; }
   background: var(--green-700);
   transform: translateY(-2px);
   text-decoration: none;
-  box-shadow: 0 10px 28px rgba(0,31,46,.4);
+  box-shadow: 0 10px 28px rgba(4,21,13,.4);
 }
 .call-fab__icon { font-size: 1.2rem; line-height: 1; }
 
 @keyframes callPulse {
-  0%   { box-shadow: 0 8px 24px rgba(0,31,46,.35), 0 0 0 0 rgba(0,52,76,.45); }
-  70%  { box-shadow: 0 8px 24px rgba(0,31,46,.35), 0 0 0 14px rgba(0,52,76,0); }
-  100% { box-shadow: 0 8px 24px rgba(0,31,46,.35), 0 0 0 0 rgba(0,52,76,0); }
+  0%   { box-shadow: 0 8px 24px rgba(4,21,13,.35), 0 0 0 0 rgba(13,61,35,.45); }
+  70%  { box-shadow: 0 8px 24px rgba(4,21,13,.35), 0 0 0 14px rgba(13,61,35,0); }
+  100% { box-shadow: 0 8px 24px rgba(4,21,13,.35), 0 0 0 0 rgba(13,61,35,0); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -657,7 +657,7 @@ a:hover { text-decoration: underline; }
 
 .delivery-card:hover{
     border-color:var(--green-600);
-    background:#f5fafc;
+    background:#f3faf5;
 }
 
 .delivery-card input[type="radio"]{
@@ -723,7 +723,7 @@ a:hover { text-decoration: underline; }
 
 .gallery__item {
   border-radius: 20px;
-  box-shadow: 0 10px 36px rgba(0,31,46, .16);
+  box-shadow: 0 10px 36px rgba(4,21,13, .16);
   background: #fff;
 }
 
@@ -907,7 +907,7 @@ a:hover { text-decoration: underline; }
   display: block;
   width: 100%;
   text-align: center;
-  color: red;
+  color: var(--error);
   text-decoration: line-through;
   font-weight: 700;
   font-size: .9rem;
